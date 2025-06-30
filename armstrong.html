@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Document</title>
+    <script>
+        
+        
+
+function checkarmstrong() {
+    let n = document.getElementById("armstrong").value; // Get the value from the input
+    let digits = n.toString().split(''); // Split the number into digits
+    let power = digits.length; // Get the number of digits
+    let sum = 0;
+
+    // Calculate the sum of each digit raised to the power of the number of digits
+    for (let digit of digits) {
+        sum += Math.pow(parseInt(digit), power);
+    }
+
+    // Check if the sum equals the original number
+    if (sum === parseInt(n)) {
+        document.getElementById("result").innerHTML = `${n} is an Armstrong number.`;
+    } else {
+        document.getElementById("result").innerHTML = `${n} is not an Armstrong number.`;
+    }
+}
+
+    </script>
+
+</head>
+<body>
+    <section class="armstrong content">
+        <h1>Understanding Armstrong Numbers, Their Significance, and How to Generate Them in JavaScript</h1>
+    <p>Armstrong numbers, also known as narcissistic numbers, are fascinating numbers in number theory.</p>
+        <h2>What is Armstrong number</h2>
+        <p>An Armstrong number (also known as a narcissistic number) is a special type of number that satisfies a unique mathematical condition. A number is considered an Armstrong number if the sum of its digits, each raised to the power of the total number of digits, is equal to the number itself.</p>
+            
+            <p>Example</p>
+            <ul>
+                <li><strong>9474:</strong> 9^4 + 4^4 + 7^4 + 4^4 = 9474</li>
+            </ul>
+            <h2>Significance of Armstrong number</h2>
+            <ul>
+                <li><strong>Pattern Recognition and Algorithm Design</strong>
+                    In computer science, Armstrong numbers are often used to practice problem-solving techniques, especially in algorithm design.</li>
+                <li><strong>Introduction to Modular Arithmetic</strong> Armstrong numbers provide a concrete example of how numbers behave when broken into parts (such as their digits) and manipulated through arithmetic operations. </li>
+                
+            </ul>
+            <h2>Generating Armstrong number</h2>
+            <pre><code>function checkarmstrong() {
+           
+    let digits = n.toString().split('');  // Split the number into digits
+    let power = digits.length;  // Get the number of digits
+    let sum = 0;
+                    
+                        
+      for (let digit of digits) {
+        sum += Math.pow(parseInt(digit), power);
+        }
+                    
+       // Check if the sum equals the original number
+    if (sum === parseInt(n)) {
+      document.getElementById("result").innerHTML = `${n} is an Armstrong number.`;
+  } else {
+      document.getElementById("result").innerHTML = `${n} is not an Armstrong number.`;
+      }
+  }
+                    
+            
+    let num=153 //check armstrong
+            
+                    </code></pre>
+
+            <h3>Output:</h3>
+    <pre><code>153 is an Armstrong number.</code></pre>
+    <h2>
+    let's break down this for Better understanding
+    </h2>
+    <ol>
+        <li><code>num.toString()</code>-converts the number into a string (e.g., 153 becomes '153').</li>
+        <li><code>.split('')</code> splits the string into individual characters (digits), so '153' becomes ['1', '5', '3']</li>
+        <li>The variable <code>power </code>stores how many digits are in the number. For 153, digits.length is 3 because there are 3 digits.</li>
+     <li>This <code>sum</code> variable will hold the total sum of each digit raised to the power of the number of digits.</li>
+     <li><code> <pre>
+        for (let digit of digits) {
+            sum += Math.pow(parseInt(digit), power);
+         }
+     </pre></code><br>This loop goes through each digit in the digits array. It converts the string digit back to an integer using <code>parseInt(digit).</code></li>
+    <li><code>Math.pow(parseInt(digit), power)</code> raises the digit to the power of the total number of digits in the original number.</li>
+    <li>Then it checks if sum is equal to num and display statement according to the condition</li>
+    </ol>
+    <h3>Try it yourself !! Enter a number and click on generate</h3>
+    <label class="enter">Enter the number:</label><input type="number" id="armstrong"  value="153" min="1">
+    <button onclick="checkarmstrong()">Generate Armstrong</button>
+    <p id="result"></p>
+    
+            
+    </section>
+    <button class="back">
+        <a href="index.html">BACK TO HOME</a>
+    </button>
+    </body>

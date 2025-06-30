@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Document</title>
+    <script>
+        function checkAnswer() {
+    let answer = document.getElementById("quiz-answer").value;
+    if (answer == 34) {
+        document.getElementById("quiz-result").innerText = "Correct!";
+    } else {
+        document.getElementById("quiz-result").innerText = "Try again!";
+    }
+}
+
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assests/image/s logo.jpg" alt="logo">
+            </a>
+            <div class="navbar">
+                
+                <a href="#home">Home</a>
+                <a href="#topics">Topics</a>
+                <a href="#featured post">Featured Post</a>
+                <a href="#recent post">Recent Post</a>
+                <a href="#contact">Contact</a>
+              <button>Subscribe</button>
+            </div>
+        </div>
+    </header>
+    <article class="welcome">
+        <div class="intro">
+            <br><h1>I'm <strong>Shreeya Jagtap</strong></h1><br><hr>
+            <p>Welcome to Sizzling Sequences, where we explore some of the most intriguing concepts in mathematics: the Fibonacci Series, Factorials, and Armstrong Numbers. <br>Whether you're a student, a math enthusiast, or someone looking to understand how these mathematical wonders work, you've come to the right place!
+            </p>
+        </div>
+       
+    </article>
+    <div class="blog">
+        <h2 style="color:bisque"> Explore Interesting Concepts!! </h2>
+        <div class="fibo start">
+            <a href="fibo.html"><img src="./assests/image/fibonacci.jpg" alt="understand fibo"></a>
+           
+        </div>
+        <div class="fact start"> 
+            <a href="fact.html"><img src="./assests/image/What-is-Factorial.png" alt="understand fact"></a>
+        </div>
+        <div class="armstrong start">
+            <a href="armstrong.html"><img src="./assests/image/armstrong.jpg" alt="understand armstrong"></a>
+        </div>
+    </div>
+    <br>
+    <div class="testimonial">
+        <h2>What Readers Are Saying</h2>
+        <blockquote>
+            "Sizzling Sequences offers an insightful and engaging take on mathematical concepts. I learned more about Fibonacci than I ever imagined!"
+            <footer>- Jane Smith, Math Enthusiast</footer>
+        </blockquote>
+    </div>
+    
+    <br>
+    <div class="quiz-section">
+        <h2>Test Your Math Knowledge</h2>
+        <p>Question: What is the 10th number in the Fibonacci sequence?</p>
+        <input type="text" id="quiz-answer" placeholder="Your answer" />
+        <button onclick="checkAnswer()">Submit Answer</button>
+        <p id="quiz-result"></p>
+    </div>
+    <div class="topics">
+        <div class="topic-content">
+            <h2 class="heading" style="color:whitesmoke">Hot topics</h2>
+           <p>Don't miss out on the latest news about Traveltips,Hotel review,food guide...</p>
+        </div>
+           
+           <div class="topic-box">
+           <div class="topic1 news">
+            <img src="./assests/image/sport.jpg" alt="sportnews">
+           <p>66 posts   <i class="fa-solid fa-thumbs-up"></i></p>
+          </div>
+        <div class="topic2 news">
+             <img src="./assests/image/hotel.jpg" alt="hotelnews">
+             <p>78 posts <i class="fa-solid fa-thumbs-up"></i></p>
+        </div>
+        <div class="topic3 news">
+            <img src="./assests/image/food.webp" alt="foodreview">
+            <p>80 posts <i class="fa-solid fa-thumbs-up"></i></p>
+        </div>
+           
+           
+        </div>
+    </div>
+
+    
+
+
+
+</body>
+</html>
